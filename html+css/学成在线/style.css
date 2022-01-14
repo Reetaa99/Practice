@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 此处是版心属性 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 因为所有的几乎都不要样式，所以放在开头的位置 */
+li {
+    list-style: none;
+} 
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+
+.header .logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+}
+
+.header .nav {
+    float: left;
+    margin-left: 60px;
+    /* 宽度不用给，万一以后nav要加东西，盒子可以跟着撑开 */
+}
+
+.header .nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.header .nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.header .nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+/* search part */
+.header .search {
+    float: left;
+    height: 42px;
+    width: 412px;
+    margin-left: 70px;
+}
+
+.header .search input {
+    float: left;
+    width: 345px;
+    height: 40px;
+    font-size: 14px;
+    color: #bfbfbf;
+    border: 1px solid #00a4ff;
+    border-right: none; 
+    padding-left: 15px;
+}
+
+.header .search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    background-image: url(images/button.png);
+    /* background-repeat: no-repeat;是不需要的，因为图片高度只有40px，我们需要平铺图片 */
+    /* button默认有个边框需要我们手动去除 */
+    border: 0;
+}
+
+.header .user {
+    float: right;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+    margin-right: 30px;
+}
+
+/* banner part */
+.banner {
+    height: 421px;
+    background-color: #1c036c
+}
+
+.banner .w {
+    height: 421px;
+    /* background : background-color background-image background-repeat background-attachment background-position; */
+    background: url(images/download.png) no-repeat top center;
+}
+
+.banner .w .subnav {
+    float: left;
+    height: 421px;
+    width: 190px;
+    background: rgba(0, 0, 0, .3)
+}
+
+.banner .w .subnav ul li {
+    /* a属于行内元素是没有高度的，所以设置li的高度 */
+    /* 只有块元素才可以默认“继承”其父元素的width. */
+    /* 浮动元素和定位元素也是不默认（不自动）“继承”其父元素宽度的。 */
+    /* background-color: burlywood; */
+    height: 45px;
+    line-height: 45px;
+    /* 没有特别设定宽度，只是继承的话，padding不撑开盒子 */
+    padding: 0 20px;
+}
+
+.banner .w .subnav ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.banner .w .subnav ul li a span {
+    float: right;
+    /* background-color: orange; */
+}
+
+.banner .w .subnav ul li a:hover {
+    color: #00a4ff
+}
+
+.banner .w .course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: pink;
+    margin-top: 50px;
+}
+
