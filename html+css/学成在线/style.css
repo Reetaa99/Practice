@@ -143,7 +143,48 @@ a {
     float: right;
     width: 230px;
     height: 300px;
-    background-color: pink;
+    background-color: white;
+    /* 父盒子里子盒子设置margin-top会出现外边局合并的问题
+       但是浮动的盒子不出现此问题 */
     margin-top: 50px;
 }
 
+.banner .w .course h2 {
+    height: 48px;
+    font-size: 18px;
+    background-color: #9bceea;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+}
+
+.banner .w .course .main {
+    padding: 0 20px;
+}
+
+.banner .w .course .main ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.banner .w .course .main ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.banner .w .course .main ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.banner .w .course .main a {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00a4ff;
+    margin-top: 3px;
+}
