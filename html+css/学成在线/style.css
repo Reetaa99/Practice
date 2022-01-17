@@ -273,12 +273,28 @@ a {
 
 /* 把li的父亲ul修改的足够宽：一行能放下五个盒子，就不用换行了 */
 .box .bd ul li{
+    position: relative;
     float: left;
     width: 228px;
     height: 270px;
     background-color: white;
     margin-right: 15px;
     margin-bottom: 15px;
+}
+
+.box .bd ul li a .hot {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+    /* initial改为原大小 */
+    width: initial;
+    /* 229p这里老师用的方法是
+        <em>
+            <img src="images/hot.png"></img>
+        </em>
+    然后下面直接设置 .box .bd ul li>img { width: 100%}
+    这样只有亲儿子img会变，em里的是孙子不会变 */
+    /* 图片外最好加一个盒子，因为盒子比图片好控制 */
 }
 
 .box .bd ul li img {
