@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            background-color: pink;
+            width: 520px;
+            height: 280px;
+            /* 相对定位可以这样水平居中，另外两个不可以 */
+            margin: 0 auto;
+        }
+
+        .tb-promo .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            color: white;
+            text-align: center;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            /* border-radius: 0 50% 50% 0; */
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .tb-promo .prev {
+            left: 0px;
+
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .tb-promo .next {
+            /* 加了定位的盒子可以直接设置宽高 */
+            right: 0px;
+
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+
+        }
+
+        .tb-promo .promo-nav {
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: 15px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+        .tb-promo ul li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        .tb-promo .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="images/tb.jpeg" alt="">
+        <a class="prev"> &lt; </a>
+        <a class="next"> &gt; </a>
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

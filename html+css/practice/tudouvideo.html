@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .video {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            margin: auto;
+        }
+
+        .video img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cover {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5) url(images/arr.png) no-repeat center;
+        }
+
+        .video:hover .cover {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video">
+        <img src="images/tudou.jpeg" alt="">
+        <div class="cover"></div>
+    </div>
+</body>
+
+</html>
