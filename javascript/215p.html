@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            width: 520px;
+            margin: auto;
+        }
+
+        .userName,
+        .pwd {
+            float: left;
+            width: 220px;
+            height: 40px;
+            color: gray;
+            border: 1px solid #999;
+            padding-left: 5px;
+            margin-right: 5px;
+        }
+
+        button {
+            float: right;
+            width: 50px;
+            height: 40px;
+            margin-left: 5px;
+            background-color: skyblue;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .change {
+            outline: 0;
+            border: 1px solid pink;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <input type="text" value="邮箱/ID/手机号" class='userName'>
+        <input type="text" value="密码" class='pwd'>
+        <button>登陆</button>
+    </div>
+
+    <script>
+        var userName = document.querySelector('.userName');
+        var pwd = document.querySelector('.pwd');
+
+        function focus(info, text) {
+            info.className = 'userName change';
+            if (info.value == text) {
+                info.value = '';
+            }
+        }
+
+        function blur(info, text) {
+            info.className = 'userName';
+            if (info.value === '') {
+                info.value = text;
+            }
+        }
+
+        userName.onfocus = function () { focus(userName, '邮箱/ID/手机号') };
+        pwd.onfocus = function () { focus(pwd, '密码') };
+        userName.onblur = function () { blur(userName, '邮箱/ID/手机号') };
+        pwd.onblur = function () { blur(pwd, '密码') };
+    </script>
+</body>
+
+</html>

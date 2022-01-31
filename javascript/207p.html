@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .search {
+            width: 400px;
+            height: 30px;
+        }
+
+        .search input {
+            width: 350px;
+            height: 30px;
+        }
+
+        .search img {
+            height: 30px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <input type="password" value="">
+        <img src="jsapis_material/第一天/images/close.png" alt="">
+    </div>
+
+
+    <script>
+        var search = document.querySelector('input');
+        var eyes = document.querySelector('img');
+
+
+        eyes.onclick = function () {
+            if (search.type == 'password') {
+                search.type = 'text';
+                eyes.src = 'jsapis_material/第一天/images/open.png';
+            } else {
+                search.type = 'password';
+                eyes.src = 'jsapis_material/第一天/images/close.png';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .password {
+            width: 500px;
+            height: 30px;
+            margin: auto;
+        }
+
+        .password>p {
+            float: left;
+            height: 100%;
+            line-height: 30px;
+        }
+
+        .password input {
+            float: left;
+            height: 30px;
+            width: 200px;
+        }
+
+        .password .reminder {
+            float: left;
+            height: 100%;
+            line-height: 30px;
+            margin-left: 10px;
+        }
+
+        .password .reminder img {
+            vertical-align: middle;
+        }
+
+        .password .reminder span {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="password">
+        <p>设置密码：</p>
+        <input type="text">
+        <div class="reminder">
+            <img src="jsapis_material/第一天/images/right.png" alt="">
+            <span>请输入6～16个字符</span>
+        </div>
+    </div>
+    <script>
+        var input = document.querySelector('input');
+        var reminder = document.querySelector('.reminder');
+        var img = reminder.querySelector('img');
+        var text = reminder.querySelector('span');
+        input.onblur = function () {
+            if (this.value.length < 6 || this.value.length > 16) {
+                img.src = 'jsapis_material/第一天/images/wrong.png';
+                text.innerHTML = '您输入的字符数量不正确';
+            } else {
+                img.src = 'jsapis_material/第一天/images/right.png';
+                text.innerHTML = '您输入的密码可使用';
+            }
+        }
+    </script>
+</body>
+
+</html>
