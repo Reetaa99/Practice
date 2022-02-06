@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 14px;
+      color: #333
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      width: 248px;
+      height: 163px;
+      margin: 100px auto;
+    }
+
+    .box h3 {
+      border-bottom: 1px dotted #ccc;
+      font-weight: normal;
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      /* 此处不能用margin因为border-bottom会跟着右移 */
+      padding-left: 15px;
+    }
+
+    .box ul {
+      margin-top: 5px;
+    }
+
+    /* 去掉所有li前面的小圆 */
+    li {
+      list-style: none;
+    }
+
+    .box ul li {
+      height: 23px;
+      line-height: 23px;
+      padding-left: 20px;
+    }
+
+    .box ul li a {
+      text-decoration: none;
+      color: #666;
+      font-size: 12px;
+      display: block;
+      padding: 5px;
+    }
+
+    .box ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h3>品优购快报</h3>
+    <!-- 这块ul>li*5>a可达成此效果 -->
+    <ul>
+      <!-- 用shift+alt一键添加多行 -->
+      <li><a href="#">【特惠】爆款耳机</a></li>
+      <li><a href="#">【特惠】母亲节健康好礼</a></li>
+      <li><a href="#">【特惠】耳机</a></li>
+      <li><a href="#">【特惠】100张照片免费</a></li>
+      <li><a href="#">【特惠】空调大特卖</a> </li>
+    </ul>
+
+    <!-- <div class="special-sales">
+      <a href="#">【特惠】爆款耳机</a>
+      <a href="#">【特惠】母亲节健康好礼</a>
+      <a href="#">【特惠】耳机</a>
+      <a href="#">【特惠】100张照片免费</a>
+      <a href="#">【特惠】空调大特卖</a> -->
+  </div>
+  </div>
+
+</body>
+
+</html>

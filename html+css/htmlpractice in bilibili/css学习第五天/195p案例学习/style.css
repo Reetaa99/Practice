@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+.header {
+  overflow: hidden;
+  width: 1202px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.header .logo {
+  float: left;
+  height: 100px;
+  width: 230px;
+  line-height: 100px;
+  background-image: url(images/学成在线.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.header .contents {
+  float: left;
+  width: 380px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.header .contents div {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.header .contents div a {
+  font-size: 18px;
+  color: black;
+  margin: 40px 0 30px 24px;
+  margin-right: 0;
+  padding: 0 12px 9px 12px;
+}
+
+.header .contents a:hover {
+  border-bottom: 2px solid blue;
+}
+
+.header .search {
+  float: left;
+  width: 412px;
+  height: 40px;
+  margin: 31px 0;
+}
+
+.header .search input {
+  float: left;
+  width: 340px;
+  height: 40px;
+  color: gray;
+  padding-left: 20px;
+  border: 1px solid skyblue;
+}
+
+.header .search button {
+  float: left;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  background-image: url(images/fa-search.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.header .login {
+  float: left;
+  margin: 35px 0 0 30px;
+}
+
+.header .login .photo {
+  float: left;
+  height: 33px;
+  width: 33px;
+  margin-right: 5px;
+  background-image: url(images/photo.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  border-radius: 50%;
+}
+
+.header .login span {
+  float: left;
+  line-height: 33px;
+}
+
+.banner {
+  height: 420px;
+  width: 100%;
+  background-image: url(images/banner2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner .center {
+  width: 1202px;
+  margin: 0 auto;
+}
+
+.banner .center .table-contents {
+  float: left;
+  padding-top: 42px;
+  background-color: rgba(20, 2, 75, 0.7);
+}
+
+li {
+  list-style: none;
+}
+
+.banner .center .table-contents ul li a{
+  float: left;
+  width: 172px;
+  height: 42px;
+  color: white;
+  background-image: url(images/rightarrow-white.png);
+  background-repeat: no-repeat;
+  background-position: 162px 8px;
+  padding-left: 20px;
+}
+
+.banner .center .table-contents ul li a:hover {
+  color: #00b4ff;
+  background-image: url(images/rightarrow-blue.png);
+  background-repeat: no-repeat;
+  background-position: 162px 8px;
+}
+
+.my-courses {
+  float: right;
+  width: 230px;
+  height: 300px;
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+.my-courses h3 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  background-color: #9bceea;
+}
+
+.my-courses ul li {
+  height: 32px;
+  width: 190px;
+  color: gray;
+  padding: 15px 0;
+  margin: 0 20px;
+  border-bottom: 1px solid gray;
+}
+
+.my-courses ul li a:hover {
+  font-weight: 700;
+}
+
+.my-courses ul li a .topic {
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+.my-courses ul li a p {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.my-courses .all-courses {
+  font-size: 16px;
+  width: 70px;
+  padding: 12px 64px;
+  margin: 5px auto;
+  border: 1px solid #00a4ff;
+}
+
+.my-courses .all-courses a {
+  color: #00a4ff;
+}
+
+.my-courses .all-courses a:hover {
+  font-weight: 700;
+}
+
+.tab {
+  height: 62px;
+  width: 1202px;
+  margin: 8px auto;
+  background-color: white;
+  box-shadow: 2px 0px 5px 1px rgba(0, 0, 0, .3);
+}
+
+.tab span a {
+  float: left;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  padding: 0 35px;
+  border-right: 1px solid gray;
+  margin: 20px 0;
+}
+
+.tab span a:hover {
+  color: #00a4ff;
+}
+
+.tab .no-right-vertical {
+  border-right: none;
+}
+
+.tab .interest-change a {
+  float:right;
+  color:#42b2ff;
+  font-size: 14px;
+  margin-right: 25px;
+  border-right: none;
+}
+
+.suggestion {
+  width: 1202px;
+  margin: 35px auto;
+  overflow: hidden;
+}
+
+.suggestion .suggestion-bar {
+  height: 42px;
+}
+
+.suggestion .suggestion-bar h4 {
+  float: left;
+  color: black;
+}
+
+.suggestion .suggestion-bar h6 {
+  float: right;
+  margin-right: 25px;
+  color: gray;
+}
+
+.suggestion .big-box .classes {
+  float: left;
+  height: 271px;
+  width: 228px;
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0 15px 15px 0;
+}
+
+.suggestion .big-box .no-right-margin {
+  margin-right: 0px;
+}
+
+.suggestion .big-box .info {
+  margin-top: 155px;
+  height: 20px;
+  padding: 25px 20px 0 25px;
+}
+
+.suggestion .big-box .info h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.suggestion .big-box .info .details {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.suggestion .big-box .info .details h6 {
+  float: left;
+  color: orangered;
+  margin-right: 20px;
+  font-size: 12px;
+}
+
+.suggestion .big-box .info .details ul {
+  float: left;
+}
+
+.suggestion .big-box .info .details ul li {
+  float: left;
+  list-style: inside;
+}
+
+.suggestion .big-box .class1 {
+  background-image: url(images/class2.png);
+}
+.suggestion .big-box .class2 {
+  background-image: url(images/class2.png);
+}
+.suggestion .big-box .class3 {
+  background-image: url(images/class3.png);
+}
+.suggestion .big-box .class4 {
+  background-image: url(images/class1.png);
+}
+.suggestion .big-box .class5 {
+  background-image: url(images/class1.png);
+}
+.suggestion .big-box .class6 {
+  background-image: url(images/class2.png);
+}
+.suggestion .big-box .class7 {
+  background-image: url(images/class1.png);
+}
+.suggestion .big-box .class8 {
+  background-image: url(images/class1.png);
+}
+.suggestion .big-box .class9 {
+  background-image: url(images/class2.png);
+}
+.suggestion .big-box .class10 {
+  background-image: url(images/class3.png);
+}

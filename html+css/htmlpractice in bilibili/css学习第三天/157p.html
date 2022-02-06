@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .box {
+      background-color: white;
+      width: 296px;
+      height: 415px;
+      /* 让块级的盒子水平居中：两个条件有width以及margin左右设为auto */
+      margin: 100px auto;
+    }
+
+    .box img {
+      width: 100%;
+    }
+
+    .box .review {
+      font-size: 14px;
+      color: #333;
+      height: 70px;
+      /* 没设定宽度width，所以padding不会撑大盒子 */
+      padding: 0 25px;
+      padding-top: 25px;
+      line-height: 25px;
+    }
+
+    .box .appraise {
+      font-size: 12px;
+      color: gray;
+      padding: 0 25px;
+      margin-top: 20px;
+    }
+
+    .box .info {
+      margin-top: 7px;
+    }
+
+    .box .info .name {
+      border-right: 2px solid #333;
+      padding: 0 10px 0 25px;
+    }
+
+    .box .info .price {
+      color: red;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img src="imagse/img.jpg" alt="listening earphone">
+    <p class="review">good delivery. Whole not bad, bluetooth is fast, nice</p>
+    <div class="appraise">from user 11214214513</div>
+    <div class="info">
+      <span class="name"> Redmi Aridots Wirelesss Blue </span>
+      <span class="price">$ 99.9</span>
+    </div>
+  </div>
+</body>
+
+</html>

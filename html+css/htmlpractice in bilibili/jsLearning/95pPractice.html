@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Question 1
+    var sum = 0;
+    for (var num = 1; num <= 100; num++) {
+      sum += num;
+    }
+    var avg = sum / 100;
+    console.log(sum);
+    console.log(avg);
+
+    // Question 2
+    var sum2 = 0;
+    for (var num2 = 1; num2 <= 100; num2++) {
+      if (num2 % 2 == 0) {
+        sum2 += num2;
+      }
+    }
+    console.log(sum2);
+
+    // Question 3
+    var str = "";
+    for (var rectRow = 1; rectRow <= 5; rectRow++) {
+      for (var rectCol = 1; rectCol <= 5; rectCol++) {
+        str += "⭐";
+      }
+      str += "\n"
+    }
+    console.log(str);
+
+    // Question 5
+    var str5 = "";
+    for (var rectRow = 1; rectRow <= 5; rectRow++) {
+      for (var rectCol = 1; rectCol <= rectRow; rectCol++) {
+        str5 += "⭐";
+      }
+      str5 += "\n"
+    }
+    console.log(str5);
+
+    // Question 6
+    var str99 = "";
+    for (var rectRow = 1; rectRow <= 9; rectRow++) {
+      for (var rectCol = 1; rectCol <= rectRow; rectCol++) {
+        str99 += rectCol + "*" + rectRow + "=" + (rectCol * rectRow) + "\t";
+      }
+      str99 += "\n"
+    }
+    console.log(str99);
+
+    // Question 7
+    /*
+    var userName = prompt('请输入用户名');
+    var pw = prompt('请输入密码');
+    while (userName != 'admin' || pw != '123456') {
+      alert('登陆失败，请重新输入')
+      var userName = prompt('请输入用户名');
+      var pw = prompt('请输入密码');
+    }
+    alert('登陆成功');
+    */
+
+    // Question 8
+    var sum8 = 0;
+    for (var num8 = 1; num8 <= 100; num8++) {
+      if (num8 % 10 == 3) {
+        continue;
+      }
+      sum8 += num8;
+    }
+    console.log(sum8);
+
+    // team hw
+    var cash = 100;
+    var action = prompt('请输入您的操作：\n1.存钱 \n2.取钱 \n3.显示余额 \n4.退出');
+    switch (Number(action)) {
+      case 1:
+        var input = prompt('您要存的钱数是？');
+        cash += Number(input);
+        alert('您现在的余额为' + cash);
+        break;
+      case 2:
+        var output = prompt('您要取的钱数是？');
+        cash -= Number(output);
+        alert('您现在的余额为' + cash);
+        break;
+      case 3:
+        alert('您现在的余额为' + cash);
+        break;
+      case 4:
+        alert('您已退出此页面');
+        break;
+      default:
+        alert('无法读取，请重新输入');
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
