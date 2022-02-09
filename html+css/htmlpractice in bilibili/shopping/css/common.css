@@ -1,3 +1,17 @@
+.clearfix:after{
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+.clearfix {
+  /* 触发 hasLayout */
+  zoom: 1;
+  }
+
+
 /* 版心 */
 .w {
   width: 1200px;
@@ -40,6 +54,11 @@
   border-right: 1px solid #666;
 }
 
+.top .list_of_mine ul li {
+  font-family: 'icomoon';
+}
+
+
 /* .top .list_of_mine ul li {
   float: left;
   padding: 0 15px;
@@ -67,21 +86,26 @@ header .search_section {
 header .search_section .search {
   width: 538px;
   height: 36px;
+  outline: #c81623 solid 2px;
 }
 
 header .search_section .search input {
   width: 456px;
   height: 100%;
   padding: 0 10px;
+  border: 0;
 }
 
 header .search_section .search button {
   width: 82px;
   height: 100%;
+  border: 0;
+  background-color: #c81623;
+  color: #fff;
 }
 
 header .search_section .suggestion {
-  margin: 0 10px;
+  margin: 5px 10px;
 }
 
 header .search_section .suggestion ul li{
@@ -90,6 +114,7 @@ header .search_section .suggestion ul li{
 }
 
 header .cart {
+  position: relative;
   float: right;
   padding-left: 46px;
 }
@@ -98,5 +123,29 @@ header .cart button {
   display: block;
   width: 140px;
   height: 35px;
+  font-family: 'icomoon';
 }
 
+header .cart .notice, .number {
+  position: absolute;
+
+  font-size: 12px;
+
+}
+
+header .cart .notice {
+  top: -15px;
+  right: 15px;
+  font-family: 'icomoon';
+  color: #c81623;
+  z-index: 2;
+  font-size: 20px;
+}
+
+
+header .cart .number {
+  top: -11px;
+  right: 18px;
+  color: #fff;
+  z-index: 3;
+}
