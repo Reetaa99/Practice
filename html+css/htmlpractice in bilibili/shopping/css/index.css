@@ -98,7 +98,7 @@ nav .banner .main_pic {
 
 nav .banner .main_pic .left, .right {
   position: absolute;
-  top: calc(455px / 2 - 20px);
+  top: calc(100% / 2 - 20px);
   width: 20px;
   height: 40px;
   line-height: 40px;
@@ -119,7 +119,7 @@ nav .banner .main_pic .right {
 nav .banner .main_pic .bottom {
   position:absolute;
   bottom: 10px;
-  left: calc(720px / 2 - 50px);
+  left: calc(100% / 2 - 50px);
   width: 100px;
   height: 20px;
   border-radius: 10px;
@@ -145,7 +145,7 @@ nav .banner .main_pic .bottom li a:hover {
 /* nav new_shortcut starts here */
 nav .news_shortcut {
   position: relative;
-  float: right;
+  float: left;
   width: 250px;
   height: calc(100% - 10px);
   margin-top: 10px;
@@ -229,10 +229,35 @@ nav .news_shortcut .adad {
   float: left;
   width: 206px;
   height: 100%;
-  line-height: 163px;
   background-color: #5c5251;
   font-size: 16px;
   color: #fff;
+  text-align: center;
+}
+
+.suggestion .today_suggestion .clock {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 32px;
+  font-family: 'icomoon';
+  font-size: 30px;
+}
+
+.suggestion .today_suggestion .timer {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.suggestion .today_suggestion .timer li {
+  float: left;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #333;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -460,7 +485,7 @@ nav .news_shortcut .adad {
 
 .fixed_bar {
   position: fixed;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 3;
   top: 150px;
   left: calc((100% - 1200px) / 2 - 68px - 10px);
