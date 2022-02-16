@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        .box {
+            float: left;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        for (var i = 0; i < 9; i++) {
+            var row = document.createElement('div');
+            row.className = 'row clearfix';
+            document.body.appendChild(row);
+            for (var j = 0; j <= i; j++) {
+                var box = document.createElement('div');
+                box.className = 'box';
+                box.innerHTML = j + ' x ' + i + ' = ' + (i * j);
+                row.appendChild(box);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

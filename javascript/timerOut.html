@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .timer ul {
+            height: 300px;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .timer ul li {
+            float: left;
+            list-style: none;
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        .timer ul li:nth-child(n+1) {
+            margin-left: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timer">
+        <h2>京东秒杀 </h2>
+        <p>本场距离结束还剩</p>
+        <ul class="timer_box">
+            <li class="h"></li>
+            <li class="m"></li>
+            <li class="s"></li>
+        </ul>
+    </div>
+</body>
+<script>
+    var endTime = + new Date('2022-2-7 0:39:59');
+    var ul = document.querySelector('.timer_box')
+    var h = ul.children[0]
+    var m = ul.children[1]
+    var s = ul.children[2]
+
+    function timer() {
+        var now = + new Date();
+        var timeDifference = endTime - now;
+        var hr = parseInt(timeDifference / 1000 / 60 / 60);
+        var min = parseInt(timeDifference / 1000 / 60 % 60);
+        var sec = parseInt(timeDifference / 1000 % 60);
+        hr = hr < 10 ? '0' + hr : hr;
+        min = min < 10 ? '0' + min : min;
+        sec = sec < 10 ? '0' + sec : sec;
+        h.innerHTML = hr;
+        m.innerHTML = min;
+        s.innerHTML = sec;
+    }
+    setInterval(timer, 1000);
+</script>
+
+</html>

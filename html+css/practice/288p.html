@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>288,289,290p伪元素选择器使用</title>
+    <style>
+        /* 288 */
+        /* div {
+            position: relative;
+            width: 300px;
+            height: 30px;
+            border: 1px solid red;
+            margin: auto;
+        }
+
+        div::after {
+            position: absolute;
+            right: 10px;
+            line-height: 30px;
+            content: '>';
+        } */
+
+        .img {
+            position: relative;
+            width: 444px;
+            height: 320px;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 伪元素前缀是父亲元素 */
+        .img:hover::before {
+            /* content是必须存在的 */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5) url(images/arr.png) no-repeat center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text"> input不支持伪元素 -->
+    <!-- 288
+    <div></div> -->
+
+
+    <div class="img">
+        <img src="images/tudou.jpeg" alt="">
+    </div>
+</body>
+
+</html>

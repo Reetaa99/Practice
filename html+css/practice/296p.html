@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bar {
+            height: 20px;
+            width: 300px;
+            margin: 100px auto;
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 1px;
+        }
+
+        .percent {
+            height: 100%;
+            width: 0;
+            border-radius: 10px 0 0 10px;
+            background-color: red;
+            transition: all .5s;
+        }
+
+        .bar:hover .percent {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar">
+        <div class="percent"></div>
+    </div>
+</body>
+
+</html>
