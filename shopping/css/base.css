@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     height: 5000px;
-}
+} */
 /* em 和 i 斜体的文字不倾斜 */
 em,
 i {

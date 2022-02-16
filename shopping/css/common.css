@@ -1,0 +1,227 @@
+.clearfix:after{
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+.clearfix {
+  /* 触发 hasLayout */
+  zoom: 1;
+  }
+
+
+/* 版心 */
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  height: 31px;
+  background-color: #f1f1f1;
+}
+
+.top .left_top {
+  float: left;
+  font-size: 12px;
+
+}
+
+.top .left_top h4 {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 31px;
+
+}
+
+.top .left_top a {
+  margin-left: 10px;
+  color: #c81623;
+
+}
+
+.top .list_of_mine {
+  float: right;
+}
+
+/* 这种一排的被用过太多次了，所以直接写一个class用 */
+.right_border_list {
+  float: left;
+  padding: 0 15px;
+  margin: 8px 0;
+  border-right: 1px solid #666;
+}
+
+.top .list_of_mine ul li {
+  font-family: 'icomoon';
+}
+
+
+/* .top .list_of_mine ul li {
+  float: left;
+  padding: 0 15px;
+  margin: 8px 0;
+  border-right: 1px solid #666;
+} */
+
+header {
+  height: 105px;
+  padding: 27px 0;
+}
+
+header .logo {
+  float: left;
+  margin-right: 42px;
+}
+
+header .search_section {
+  float: left;
+  width: 730px;
+  height: 56px;
+  padding-left: 128px;
+}
+
+header .search_section .search {
+  width: 538px;
+  height: 36px;
+  outline: #c81623 solid 2px;
+}
+
+header .search_section .search input {
+  width: 456px;
+  height: 100%;
+  padding: 0 10px;
+  border: 0;
+}
+
+header .search_section .search button {
+  width: 82px;
+  height: 100%;
+  border: 0;
+  background-color: #c81623;
+  color: #fff;
+}
+
+header .search_section .suggestion {
+  margin: 5px 10px;
+}
+
+header .search_section .suggestion ul li{
+  display: inline;
+  padding-right: 25px;
+}
+
+header .cart {
+  position: relative;
+  float: right;
+  padding-left: 46px;
+}
+
+header .cart button {
+  display: block;
+  width: 140px;
+  height: 35px;
+  font-family: 'icomoon';
+}
+
+header .cart .notice, .number {
+  position: absolute;
+
+  font-size: 12px;
+
+}
+
+header .cart .notice {
+  top: -15px;
+  right: 15px;
+  font-family: 'icomoon';
+  color: #c81623;
+  z-index: 2;
+  font-size: 20px;
+}
+
+
+header .cart .number {
+  top: -11px;
+  right: 18px;
+  color: #fff;
+  z-index: 3;
+}
+
+
+
+
+
+/* footer starts here */
+footer {
+  height: 418px;
+  background-color: #f5f5f5;
+}
+
+footer .special {
+  height: 108px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+footer .special li {
+  float: left;
+  padding: 35px;
+}
+
+
+footer .special li .info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer .special li .info .text{
+  font-size: 14px;
+  color: #000;
+}
+
+footer .special li .info .descrip{
+  font-size: 12px;
+  color: #666;
+
+}
+
+footer .contact dl {
+  margin: 20px 50px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+footer .contact dl .box {
+  float: left;
+  margin-right: 120px;
+
+}
+
+footer .contact dl dt {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+footer .contact dl dd {
+  font-size: 12px;
+  color: #666;
+}
+
+footer .contact_list {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+.mouse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.mouse img{
+  height: 30px;
+}

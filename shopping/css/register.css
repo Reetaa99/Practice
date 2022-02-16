@@ -1,0 +1,67 @@
+.main .title_part {
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  margin: 35px 0;
+  padding: 0 10px;
+  background-color: #ececec;
+}
+
+.main .title_part .new_user {
+  float: left;
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+}
+
+
+.main .title_part .login {
+  float: right;
+  font-size: 14px;
+  color: #666;
+}
+
+.main .title_part .login a {
+  color: #c81623;
+}
+
+
+.registration {
+  margin-bottom: 200px;
+}
+.registration .info p{
+  height: 60px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.registration .info p input {
+  height: 35px;
+  width: 240px;
+}
+
+.registration .agreement {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.registration .agreement  {
+  margin-bottom: 35px;
+}
+
+.registration a {
+  color: skyblue;
+}
+
+.registration button {
+  display: block;
+  width: 200px;
+  height: 35px;
+  background-color: #c81623;
+  color: #fff;
+  margin: 0 auto;
+}
+
+/* 402px */

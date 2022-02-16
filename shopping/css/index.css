@@ -56,9 +56,30 @@ nav .banner .table_contents ul {
 }
 
 nav .banner .table_contents li {
+  position: relative;
   height: calc(100% / 15);
   line-height: 31px;
   padding: 0 10px;
+  transition: all .5s;
+}
+
+nav .banner .table_contents li::after {
+  position: absolute;
+  right: 10px;
+  content: '';
+  font-family: 'icomoon';
+  color: #fff;
+}
+
+nav .banner .table_contents li:hover {
+  background-color: #fff;
+  padding-left: 20px;
+}
+
+nav .banner .table_contents li:hover a{
+  color:#c81623;
+  transition: all .5s;
+
 }
 
 nav .banner .table_contents li a {
@@ -66,6 +87,7 @@ nav .banner .table_contents li a {
 }
 
 nav .banner .main_pic {
+  position: relative;
   float: left;
   width: 720px;
   height: 455px;
@@ -74,10 +96,56 @@ nav .banner .main_pic {
   background: url(../images/banner.png) no-repeat center;
 }
 
+nav .banner .main_pic .left, .right {
+  position: absolute;
+  top: calc(100% / 2 - 20px);
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(0, 0, 0 , .5);
+  font-family: 'icomoon';
+  text-align: center;
+  font-size: 22px;
+}
+
+nav .banner .main_pic .left {
+  left: 0;
+}
+
+nav .banner .main_pic .right {
+  right: 0;
+}
+
+nav .banner .main_pic .bottom {
+  position:absolute;
+  bottom: 10px;
+  left: calc(100% / 2 - 50px);
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(0,0,0, .5);
+}
+
+nav .banner .main_pic .bottom li {
+  float: left;
+  width: 25px;
+  height: 100%;
+  line-height: 20px;
+  text-align: center;
+}
+nav .banner .main_pic .bottom li a {
+  font-family: 'icomoon';
+  color: white;
+}
+
+nav .banner .main_pic .bottom li a:hover {
+  color: #c81623;
+}
+
 /* nav new_shortcut starts here */
 nav .news_shortcut {
   position: relative;
-  float: right;
+  float: left;
   width: 250px;
   height: calc(100% - 10px);
   margin-top: 10px;
@@ -92,7 +160,6 @@ nav .news_shortcut .news {
 nav .news_shortcut .news .news_topic {
   height: 32px;
   line-height: 32px;
-  background-color: pink;
   border-bottom: 1px dotted #e4e4e4;
   padding: 0 15px;
 }
@@ -162,10 +229,35 @@ nav .news_shortcut .adad {
   float: left;
   width: 206px;
   height: 100%;
-  line-height: 163px;
   background-color: #5c5251;
   font-size: 16px;
   color: #fff;
+  text-align: center;
+}
+
+.suggestion .today_suggestion .clock {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 32px;
+  font-family: 'icomoon';
+  font-size: 30px;
+}
+
+.suggestion .today_suggestion .timer {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.suggestion .today_suggestion .timer li {
+  float: left;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #333;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -245,7 +337,6 @@ nav .news_shortcut .adad {
 .electrics {
   margin-top: 30px;
   height: 476px;
-  border-bottom: 1px solid #c81623;
 }
 
 
@@ -268,6 +359,7 @@ nav .news_shortcut .adad {
 .electrics .title ul li {
   font-size: 12px;
 }
+
 
 .electrics .details {
   height: 364px;
@@ -317,9 +409,97 @@ nav .news_shortcut .adad {
   width: 330px;
   height: 100%;
   background-color: #aed6d8;
+  color: #3d8592;
+
 }
 
-/* h30px
-210px
-330px
-220*3 */
+.details .boiling_pot .item_name {
+  margin: 40px 0 0 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.details .boiling_pot .price {
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+.details .boiling_pot .img {
+  margin: 30px;
+}
+.details .sec_one, .sec_two, .sec_three {
+  float: left;
+  width: 220px;
+  height: 100%;
+}
+
+.details .square {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 20px 0 0 15px;
+  border: 1px solid #e4e4e4;
+  border-top: 0;
+
+}
+
+.details .square .text {
+  font-size: 16px;
+  color:#000;
+}
+
+
+.details .square .price {
+  font-size: 16px;
+  color:#e60012;
+}
+
+.details .square .img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.details .square img {
+  height: 90px;
+}
+
+.details .sec_two {
+  text-align: center;
+  padding: 70px 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.details .sec_two .text {
+  font-size: 18px;
+  color:#000
+}
+
+.details .sec_two .price {
+  margin-bottom: 80px;
+  font-size: 16px;
+  color: #999;
+}
+
+
+
+.fixed_bar {
+  position: fixed;
+  background-color: transparent;
+  z-index: 3;
+  top: 150px;
+  left: calc((100% - 1200px) / 2 - 68px - 10px);
+  width: 68px;
+  height: 344px;
+}
+
+.fixed_bar li {
+  border-bottom: 1px solid #e4e4e4;
+  padding: 10px;
+}
+
+.fixed_bar li:hover a {
+  color: #c81623;
+
+}
+
