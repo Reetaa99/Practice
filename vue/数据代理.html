@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P12开始 - 数据代理</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<div id="root">
+    <h1>学校：{{name}}</h1>
+    <h1>地址：{{address}}</h1>
+</div>
+
+<body>
+    <!-- 数据代理：通过一个对象代理对另一个对象中属性的操作 读/写     -->
+    <script>
+
+        Vue.config.productionTip = false;
+        let obj = { x: 100 }
+        let obj2 = { y: 200 }
+
+        Object.defineProperty(obj2, 'x', {
+            get() {
+                return obj.x
+            },
+            set(value) {
+                obj.x = value
+            }
+        })
+
+        // 数据代理的应用
+        // vm把data里的数据存到vm里面：vm._data
+        // 然后vm加 name和address 的属性在vm里 - 为了code更方便，因为省略了_data (原来是要写 _data.name, _data.address)
+        // 通过getter读取_data里面的数据，放到 name 和 address上
+        // 如果vm.name改了，那么通过vm里的setter修改_data里的数据
+        // getter和setter这两条线就是数据代理
+        // 所以取name和address取的是vm的数据，数据从_data里面获取的
+        // 一旦data中的数据发生改变，那么页面中用到该数据的地方也会自动更新
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: '尚硅谷',
+                address: '喵喵喵'
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

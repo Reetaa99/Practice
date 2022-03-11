@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <style>
+        button {
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    Vue中的事件修饰符
+        1. prevent: 阻止默认事件
+        2. stop: 阻止事件冒泡
+        3. once: 事件只触发一次
+        4. capture: 使用事件的捕获模式/而不是冒泡
+        5. self: 只有event.target是当前操作的元素，才触发事件
+        6. passive: 事件的默认行为立即执行，无需等待事件回调执行完毕 
+    -->
+
+    <div id="root">
+        <h2>欢迎来到{{name}}学习</h2>
+        <!-- 不传参数 -->
+        <button v-on:click="showInfo">点击显示消息1</button>
+        <!-- 传参数 -->
+        <button @click="showInfo2($event, 22)">点击显示消息2</button>
+        <!-- @wheel 只要鼠标滚轮滚动一下，才引起function的触发 -->
+        <!-- @scroll （上下键，鼠标滚轮都会造成滚动条变化）只有滚动条变化才引起之后function的触发 -->
+        <a :href="link" @click.prevent.once="remind">点击此处不会跳转</a>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: '尚硅谷',
+                link: 'http://www.baidu.com'
+            },
+            // methods不做数据代理
+            // 数据代理是为了数据变化方便，而方法不会再改，不需要代理
+            methods: {
+                // method直接最终在vm里，没有getter和setter
+                showInfo(e) {
+                    alert(e.target.innerText)
+                },
+                showInfo2(e, num) {
+                    alert(e.target.innerText)
+                    alert(num)
+                },
+                remind(e) {
+                    // e.preventDefault()
+                    alert('不会跳转哦')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
