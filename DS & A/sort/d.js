@@ -1,26 +1,20 @@
-var dfs = function (currCity, provinces, isConnected) {
-    console.log('currCity now is :' + currCity);
-    for (let i = 0; i < currCity.length; i++) {
-        if (currCity[i] == 1 && !provinces.has(i)) {
-            console.log('provinces before adding new city: ' + Array.from(provinces));
-            provinces.add(i);
-            console.log('provinces after adding new city: ' + Array.from(provinces));
-            dfs(isConnected[currCity[i]], provinces, isConnected);
-        }
+var search = function (nums, target) {
+    if (nums.length <= 0) {
+        return -1;
     }
-}
 
-var findCircleNum = function (isConnected) {
-    var provinces = new Set();
-    var count = 0;
-    for (let i = 0; i < isConnected.length; i++) {
-        if (!provinces.has(i)) {
-            console.log('in the main method, now provinces is ' + Array.from(provinces));
-            dfs(isConnected[i], provinces, isConnected);
-            count++;
-        }
+    let mid = Math.floor(nums.length / 2);
+    console.log('mid here is ' + mid);
+    console.log(nums[mid]);
+    if (nums[mid] == target) {
+        return mid;
+    } else if (nums[mid] > target) {
+        console.log('mid at left: ' + mid);
+        return search(nums.slice(0, mid), target);
+    } else {
+        console.log('mid at right: ' + mid);
+        return mid + 1 + search(nums.slice(mid + 1), target);
     }
-    return count;
 };
 
-console.log(findCircleNum([[1, 1, 0], [1, 1, 0], [0, 0, 1]]));
+console.log(search([-1, 0, 3, 5, 9, 12], 2));
