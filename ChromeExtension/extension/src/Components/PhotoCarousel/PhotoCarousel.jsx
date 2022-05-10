@@ -23,7 +23,6 @@ export default class PhotoCarousel extends React.Component {
     render() {
         return (
             <div>
-                <p>Memory</p>
                 <div id="memo" style={{ borderColor: this.state.borderColor }} >
                     {
                         this.state.listOfImages.map(

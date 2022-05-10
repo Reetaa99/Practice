@@ -19,8 +19,20 @@
 <body>
     <div class="container mt-3" style="width: 450px;">
         <h2 class="text-center">Covid Latest Report-UK</h2>
+        <div>
+            <div id="timer">
+                <div id="1">{parseInt((time / 60)) == 0 ? "00" : parseInt((time / 60))}</div>
+                <div id="colon">:</div>
+                <div id="2">{time % 60 == 0 ? "00" : time % 60}</div>
+            </div>
+            <div id="Btn">
+                <button>Resume</button>
+                <button>Pause</button>
+                <button>Reset</button>
+            </div>
+            {/* <button onClick={start}>Activate your girlfriend reminder</button> */}
+        </div>
         <div id="photoCarousel">
-
         </div>
     </div>
 

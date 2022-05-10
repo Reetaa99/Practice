@@ -1,6 +1,6 @@
 {
-  "name": "First try React Extension",
-  "description": "The power of React and TypeScript for building interactive Chrome extensions",
+  "name": "Love Reminder",
+  "description": "Happy 3rd Anniversary ❤️ Love you Babe",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
@@ -8,12 +8,14 @@
     "default_title": "Open the popup"
   },
   "icons": {
-    "16": "logo192.png",
-    "48": "logo192.png",
-    "128": "logo192.png"
+    "16": "logoFavicon.jpeg.48x48.png",
+    "48": "logoFavicon.jpeg.48x48.png",
+    "128": "logoFavicon.jpeg.48x48.png"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage",
+    "tabs"
   ],
   "content_scripts": [
     {

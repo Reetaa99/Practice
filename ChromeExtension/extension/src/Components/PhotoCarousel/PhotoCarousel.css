@@ -8,13 +8,14 @@
 
     flex-shrink: 0;
     height: calc(90% + 3vw);
-    width: calc(90%  + 3vw);
-    border: calc(8px + 0.2vw) solid transparent;
+    width: calc(94%  + 3vw);
+    border: calc(3px + 0.2vw) solid transparent;
+    border-radius: 15%;
     background-origin: border-box;
     background-clip: content-box, border-box;
     background-size: cover;
     box-sizing: border-box;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 img {
