@@ -1,0 +1,62 @@
+{
+  // can comment
+  // ts compilator can compile based on its information inside
+  // tsc: by default compile all file
+  // include: choose which files needed to be compiled using "tsc" command
+  "include": [
+    "./src/**/*" // path: *=> any files; **=> any folder/path
+  ],
+  // not compile all files inside exclude
+  // we don't want to compile any of node_modules etc
+  // by default: shown below
+  // this is default value, we don't need to specify them below
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "jspm_packages"
+  ],
+  // very important
+  "compilerOptions": {
+    // which version of ES to compile to
+    // default to be ES3 for better compatible
+    "target": "ES3",
+    // module version we want to use here
+    "module": "es2015",
+    // what library we're gonna use
+    // "lib": [] // no need to change
+    // outDir: used to choose where to put all compiled js files
+    "outDir": "./dist",
+    // combine all code into one single file
+    // all global scope code will be combined into one file
+    // cannot combine "module" unless module prop above is "system" or "amd"
+    // "outFile": "./dist/app.js" // compile then combine everything into app.js in dist
+    // ALLOWJS: whether compile js file: if true, compile js too
+    // no compiled file in dist folder
+    "allowJs": false,
+    //whether js code fits our ts syntax rules
+    // has data type check if true
+    "checkJs": false,
+    // whether remove comments for compile
+    "removeComments": false,
+    // if true: no completed compiled files
+    "noEmit": false,
+    // if true: no compiled file if error exists
+    "noEmitOnError": false,
+    // switch for ALL STRICT OPTIONS
+    // if it's true, all the strict check below will be true
+    // if false, all strict check false;
+    // RECOMMEND: always true
+    "strict": true
+    // whether use Strict in compiled file
+    // "alwaysStrict": false,
+    // // if true: not allow implicit any (like forgot to set data type)
+    // "noImplicitAny": true,
+    // // if true： not allow implicit "this": "this" without ensured data type
+    // "noImplicitThis": false,
+    // // if something might result "null", then error
+    // // ex. let box1 = document.getElementBYId("...") might be null
+    // //     then error
+    // //     to fix it: if(box1!==null){box1.addeventlistener...} OR box1?.addEvnetlistener
+    // "strictNullChecks": false
+  }
+}
